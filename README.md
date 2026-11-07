@@ -1,2 +1,13 @@
-# little-things
-慢慢归位 · Little Things — a hand-drawn cozy organization game with 3 scenes and 36 little objects.
+# 慢慢归位 · Little Things — v1.0
+
+一个手绘风格的温馨整理游戏，包含雨后书桌、午后茶柜和手作抽屉 3 个场景、36 件物品。
+
+玩法：拖动物品到亮起的位置，或先点物品再点目标。同类物品可以自由选择空位。支持提示、撤回、重新整理、关卡解锁、轻音乐与本机存档，没有倒计时。
+
+运行：解压后打开 index.html。上传 GitHub 时，将 index.html、style.css、art.js、game.js 和本说明一起放到仓库根目录。开启 GitHub Pages 后可以用网址游玩。
+
+声音：右上角手动开启。琴音和音效使用 Web Audio 合成。插画由 SVG 绘制，没有外部图片依赖。字体加载失败时会使用本机中文字体。
+
+存档：保存在当前浏览器，不跨设备同步。清理浏览器数据会移除进度。
+
+验证：JavaScript 语法检查和游戏逻辑检查已通过，包括全部物品可解、错误归位保护、撤回、解锁、存档恢复与异常存档处理。浏览器视觉与真实手机触控尚未完成测试。

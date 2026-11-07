@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8"><meta name="description" content="慢慢归位 Little Things：没有倒计时的温馨整理游戏，给每一件小物找到一个舒服的位置。">
+  <title>慢慢归位 · Little Things</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="慢慢归位首页"><span class="brand-icon" aria-hidden="true">❀</span><span>慢慢归位<small>LITTLE THINGS</small></span></a>
+      <div class="header-note"><span class="live-dot"></span>给生活，留一点呼吸的空隙</div>
+      <div class="header-actions"><button id="sound" class="icon-btn" aria-label="开启声音" aria-pressed="false" title="开启声音"></button><button id="help" class="icon-btn" aria-label="玩法说明" title="玩法说明">?</button></div>
+    </header>
+    <main>
+      <section class="intro"><div><p class="eyebrow">A SMALL PLACE, A SOFTER DAY</p><h1>小小角落，慢慢整理。</h1><p class="subtitle">不必赶时间。让喜欢的小东西，都有一个舒服的位置。</p></div><div class="chapter-counter"><span id="chapter-count">01</span><span> / 03<small>属于你的安静时光</small></span></div></section>
+      <nav id="chapters" class="chapters" aria-label="选择整理场景"></nav>
+      <div class="play-layout">
+        <section class="game-card" aria-label="整理游戏">
+          <div class="scene-heading"><div><span id="scene-tag" class="scene-tag">CHAPTER 01</span><h2 id="scene-title">雨后的书桌</h2></div><div class="scene-weather"><span aria-hidden="true">☂</span><span id="weather-label">窗外是轻轻的雨</span></div></div>
+          <div id="world" class="world" aria-label="房间和收纳位置"><div id="room-art" class="room-art" aria-hidden="true"></div><div id="slots" class="slots"></div><div id="placed" class="placed"></div><div id="particles" class="particles" aria-hidden="true"></div><div class="room-caption" id="room-caption">一杯热茶，一张等你整理的书桌。</div></div>
+          <div class="scene-footer"><span id="instruction"><span class="tiny-dot"></span>拖动物品归位，也可以点选物品后再点位置</span><button id="hint" class="text-btn"><span aria-hidden="true">✧</span> 给我一点提示</button></div>
+        </section>
+        <aside class="journal"><div class="journal-top"><span>今日 · 整理手记</span><span aria-hidden="true">✎</span></div><div id="journal-art" class="journal-art" aria-hidden="true"></div><p class="handwriting" id="journal-quote">把桌面空出来，<br>也把心里的声音放轻一点。</p><div class="progress-row"><span>角落正在变好</span><strong id="progress-number">0 / 12</strong></div><div class="progress-track"><div id="progress-fill"></div></div><ul id="checklist" class="checklist"></ul><div class="journal-divider"></div><div class="item-note"><span class="note-label">小物的故事</span><p id="item-story">点一下小物件，读读它的小故事。</p></div><div class="journal-bottom"><span class="leaf-mark" aria-hidden="true">❧</span><span>今天，也可以慢一点。</span></div></aside>
+      </div>
+      <section class="tray-section" aria-label="待整理的物品"><div class="tray-heading"><h3>等待归位的小东西 <span id="remaining">12 件</span></h3><div class="tray-actions"><button id="undo" class="text-btn" disabled>↶ 撤回一步</button><button id="restart" class="text-btn">重新整理</button></div></div><div id="tray" class="tray"></div><div class="tray-bottom"><span>✧ 没有倒计时，也没有失误惩罚</span><span id="save-state">进度会自动保存</span></div></section>
+    </main>
+    <footer class="page-footer"><span>Little Things · 慢慢归位</span><span>为每一份小小的整齐，留一个微笑。<span class="footer-flower"> ❀</span></span></footer>
+  </div>
+  <div id="toast" role="status" class="toast" aria-live="polite"></div>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+  <script src="art.js"></script><script src="game.js"></script>
+</body>
+</html>
